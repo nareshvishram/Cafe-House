@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+{% if request.user.username and request.user.is_superuser %}
+<ul>
+    <hr>
+    <center>Let's Edit</center>
+    <hr>
+<li><h4><a href="{% url 'aboutEdit' %}">Edit Welcome Note</a></h4></li>
+<li><h4><a href="{% url 'enterItem' %}">Enter a new Item in menu</a></h4></li>
+<li><h4><a href="{% url 'receivedMessages' %}">Total sent messages</a></h4></li>
+<hr>
+    <center>Edit Items</center>
+    <hr>
+    {% for i in all_items %}
+    <h3><li><a href="{% url 'editItem' i.id %}">{{i.title}}</a></li></h3>
+    {% endfor %}
+    <hr>
+    <center>User Logs</center>
+    <hr>
+    {% for i in all_users %}
+    <h3><li>{{i.username}} - {{i.date_joined}} </li></h3>
+    {% endfor %}
+    </ul>
+{% else %}
+<center>
+      <div style="color:red;margin:100px">
+          <p><h1>Sorry <a href="{% url 'home' %}">{{request.user.username}}</a>, You are a user not admin or super-user</h1></p>
+          <p><h1>Only Superuser is allowed to access this page.....</h1></p>
+        </div>
+</center>
+{% endif %}
+</body>
+</html>

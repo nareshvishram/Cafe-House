@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messages</title>
+</head>
+<body>
+<ol>
+{% for d in data %}
+    <li>
+        <ul>
+            <li>{{d.name}}</li>
+            <li>{{d.email}}</li>
+            <li>{{d.subject}}</li>
+            <li>{{d.message}}</li>
+            </ul>
+    </li>
+    {% endfor %}
+    </ol>
+</body>
+</html>

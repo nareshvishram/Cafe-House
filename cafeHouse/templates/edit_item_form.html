@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html>
+<style>
+    #form{
+     border: 2px solid green;
+   border-radius: 25px;
+    }
+    #song{
+     border: 2px solid red;
+     border-radius: 25px;
+     height:40px;
+     width:300px;
+    }
+</style>
+<body>
+<center>
+
+<form action="" method="post" enctype="multipart/form-data" style="margin:200px;" id="form">{% csrf_token %}
+<table>
+<tr>
+    <td class="tdLabel"><label  class="label">Enter title:</label></td>
+    <td>{{form.title}}</td>
+</tr>
+    <tr>
+    <td class="tdLabel"><label  class="label">Enter description</label></td>
+    <td>{{form.description}}</td>
+</tr>
+    <tr>
+    <td class="tdLabel"><label  class="label">Import Image:</label></td>
+    <td>{{form.image}}</td>
+</tr>
+<tr>
+    <td class="tdLabel"><label  class="label">Enter day:</label></td>
+    <td>{{form.day}}</td>
+</tr>
+    <tr>
+    <td class="tdLabel"><label  class="label">Enter Price:</label></td>
+    <td>{{form.price}}</td>
+</tr>
+<tr>
+
+    <td colspan="2"><div align="right"><input type="submit" id="song" style="width:120px"/>
+
+
+</div></td>
+</tr>
+
+
+</table>
+</form>
+    <h1><a href="{% url 'admin' %}">Already user?Login</a></h1>
+    </center>
+</body>
+</html>
+
+

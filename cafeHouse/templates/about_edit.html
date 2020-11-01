@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Form</title>
+</head>
+<body>
+<center>
+     <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+         <h1>Latest</h1>
+         {{about}}
+             <button type="submit">Submit</button>
+     </form>
+    <hr>
+    <div style="width:300px;height:100px;allign-center;">
+    {% for i in about_all_data %}
+
+      {{forloop.counter}} : {{i.note}} <br>
+        <a href="{% url 'deleteNote' i.id %}">Delete this note</a>
+        <hr>
+    {% endfor %}
+        </div>
+    </center>
+</body>
+</html>

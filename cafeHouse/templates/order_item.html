@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+</head>
+<body>
+ <div style="padding:10px;margin:100px;">
+     <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+         <ul>
+             <li>Item Name : {{ordered_item.title}}</li>
+             <li>Item Price: {{ordered_item.price}}</li>
+             <li>Frequency : <input type="text" name="freq"></li>
+             </li><button type="submit">Pay</button>
+         </ul>
+    </form>
+ </div>
+</body>
+</html>
