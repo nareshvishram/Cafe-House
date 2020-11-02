@@ -2,9 +2,9 @@
 Cafe House website
 
   # Café House
-A website where customer can order food items quickly or can see a meal which is changing day by day.
+   A website where customer can order food items quickly or can see a meal which is changing day by day.
 # 1.	Idea:
-      -> If a client is planning to open a brand-new restaurant in a city then he can use this website because this website is pretty straight forward where you just need to login and place the order. 
+  -> If a client is planning to open a brand-new restaurant in a city then he can use this website because this website is pretty straight forward where you just need to login and place the order. 
 # 2.	About Project:
 
 How a new user will use it?
@@ -32,7 +32,7 @@ Different sections in the project
       -> This section consists a small google map. Which I have developed via google map API through java script. We can change this where admin can put coordinates of the location of the restaurant. This change can only be done by the admin or owner of the restaurant.
 
 5.Admin:
-     ->This page will only be accessed by the owner of this restaurant.
+    ->This page will only be accessed by the owner of this restaurant.
      ->Through this page an owner can update all the information about this restaurant. 
      -> This page has 
          -> Update restaurant info or edit welcome note	 
